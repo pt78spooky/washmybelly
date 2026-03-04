@@ -44,15 +44,15 @@ function squeegeecursor(){
 }
 
 function washmybelly(){
-    if (angerlevel == 3 || gameimage.src == "//pt78spooky.github.io/washmybelly/res/angrybellay1.png"){
+    if (angerlevel == 3 || gameimage.src == "https://pt78spooky.github.io/washmybelly/res/angrybellay1.png"){
         gameimage.src = "res/angrybellay2.png";
         dialoguep.innerHTML = " WASH MY BELLY!!!";
         angerlevel = 0;
-    } else if(gameimage.src == "//pt78spooky.github.io/washmybelly/res/bellay3.png" || gameimage.src == "//pt78spooky.github.io/washmybelly/res/angrybellay2.png"){
+    } else if(gameimage.src == "https://pt78spooky.github.io/washmybelly/res/bellay3.png" || gameimage.src == "https://pt78spooky.github.io/washmybelly/res/angrybellay2.png"){
         gameimage.src = "res/bellay1.png"
         dialoguep.innerHTML = "";
         angerlevel++;
-    } else if(gameimage.src != "//pt78spooky.github.io/washmybelly/res/bellay3.png"){
+    } else if(gameimage.src != "https://pt78spooky.github.io/washmybelly/res/bellay3.png"){
         gameimage.src = "res/bellay3.png"
         dialoguep.innerHTML = "Wash my belly!";
     }
@@ -115,9 +115,9 @@ function notmybelly(){
 }
 
 function checkcounter(){
-    if (gameimage.src == "//pt78spooky.github.io/washmybelly/res/bellay2.png"){
+    if (gameimage.src == "https://pt78spooky.github.io/washmybelly/res/bellay2.png"){
         clearTimeout(countertimeout);
-    } else if (gameimage.src != "//pt78spooky.github.io/washmybelly/res/bellay2.png"){
+    } else if (gameimage.src != "https://pt78spooky.github.io/washmybelly/res/bellay2.png"){
         countertimeout = setTimeout(counter, 1000);
     } else {
         clearTimeout(countertimeout);
@@ -136,4 +136,5 @@ function counter(){
 
 
 console.log("Javascript loaded!");
+
 
