@@ -120,7 +120,7 @@ function checkcounter(){
     } else if (gameimage.src != "//pt78spooky.github.io/washmybelly/res/bellay2.png"){
         countertimeout = setTimeout(counter, 1000);
     } else {
-        clearTimeout(countertimeout); https:
+        clearTimeout(countertimeout);
     }
 }
 
@@ -136,3 +136,4 @@ function counter(){
 
 
 console.log("Javascript loaded!");
+
