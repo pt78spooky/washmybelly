@@ -1,0 +1,80 @@
+*{
+    text-align: center;
+}
+body{
+    color: rgb(0, 36, 102);
+    cursor: default;
+    font-family: "Sour Gummy", sans-serif;
+    font-weight: 400;
+    background-color: rgb(198, 223, 255);
+    font-weight: bold;
+}
+a{
+    font-weight: bold;
+    color: rgb(0, 53, 151);
+}
+a:hover{
+    color: rgb(61, 168, 255);
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+footer{
+    font-weight: 100;
+    font-size: 1.2em;
+}
+#gamediv{
+    position: relative;
+    top: 0px;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border: 5px solid rgb(0, 36, 102);
+    border-radius: 45px;
+    background-image: url("/res/bgimg.png");
+}
+#image{
+    position: relative;
+    z-index: 1;
+}
+button{
+    height: 64px;
+    width: 64px;
+    z-index: 2;
+    position: absolute;
+    left: 25px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    img{
+        display: block;
+        
+    }
+}
+#soap{
+    top: 20px;
+    cursor: url("/res/soap.png"), default;
+}
+#squeegee{
+    top: 104px;
+    cursor: url("/res/squeegee.png"), default;
+}
+#dialoguep{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    font-size: 1.75em;
+}
+#scorep{
+    position: absolute;
+    bottom: 5px;
+    margin-left: 250px;
+    z-index: 2;
+    font-size: 1.75em;
+}
+#notbelly{
+    display: block;
+}

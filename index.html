@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wash My Belly!</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&family=Tagesschrift&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- YO CHECK THIS OUT: https://youtu.be/LyM1UGD8sqM?si=zwu9lQaidzAuJ6aT -->
+     <h1>Wash My Belly! [THIS IS A WORK IN PROGRESS!]</h1>
+    <div id="gamediv">
+        <p id="dialoguep"></p>
+        <p id="scorep">Score: 0</p>
+        <button id="soap" onclick="soapcursor()"> <img src="/res/soap.png"></button>
+        <button id="squeegee" onclick="squeegeecursor()"><img src="/res/squeegee.png"></button>
+
+        <img id="image" src="/res/bellay1.png" usemap="#gamemap" width="600" height="600">
+
+        <map name="gamemap">
+            <area id="bellyarea" class="bellyarea" shape="poly" coords="156,419,125,368,160,296,201,253,295,260,382,249,420,271,447,306,446,373,431,409,379,454,299,470,208,459" 
+                href="#" onmouseenter="washing()" onmouseleave="notwashing()" onclick="boop()">
+            <area class="notbelly" coords="198,123,269,89,318,85,396,111,419,165,445,219,480,246,479,283,439,289,385,246,300,260,202,252,181,269,162,293,130,285,129,257,160,200"
+             shape="poly" onmouseenter="notmybelly()" onmouseleave="notwashing()" onclick="boop()">
+            <area class="notbelly" coords="151,417,186,445,173,487,133,477,111,443" shape="poly" onmouseenter="notmybelly()" onmouseleave="notwashing()" onclick="boop()">
+            <area class="notbelly" coords="378,451,417,429,441,450,422,488,386,493" shape="poly"  onmouseenter="notmybelly()" onmouseleave="notwashing()" onclick="boop()">
+        </map>
+    </div>
+    <footer>
+        <p>Footer also a work in progress: <br>
+            Game based on <a target="_blank" href="https://knowyourmeme.com/memes/i-am-pibble-wash-my-belly">this meme</a> | Aiken owned by <a target="_blank" href="https://pajulammas.tumblr.com/">Pajulammas</a> 
+            | Sonic owned by <a target="_blank" href="https://www.sega.com/">Sega Games Co.</a>
+            <br> SFX from <a target="_blank" href="https://opengameart.org/">opengameart.org</a> and <a target="_blank" href="https://pixabay.com/sound-effects/">pixabay.com</a>
+            <br>Coding, drawn assets, and Platinum by &copy; platinumspooky (2026)</p>
+    </footer>
+    <script src="script.js"> </script>
+
+    <!-- TO DO:
+        - add a different trail for the squeege tool?
+        - add shower tool (that clears all trails???)
+        - add sponge tool (with foam trail)
+        - avatar speaking audio
+        - talking animation gif
+    -->
+</body>
+</html>
