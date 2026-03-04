@@ -16,51 +16,51 @@ var ccinterval = setInterval(checkcounter, 1000);
 var countertimeout;
 var angerlevel = 0;
 //sound effects
-let bubblesound1 = new Audio("/res/pop1.ogg");
+let bubblesound1 = new Audio("res/pop1.ogg");
 bubblesound1.volume = 0.25;
-let bubblesound2 = new Audio("/res/pop2.ogg");
+let bubblesound2 = new Audio("res/pop2.ogg");
 bubblesound2.volume = 0.25;
-let bubblesound3 = new Audio("/res/pop3.ogg");
+let bubblesound3 = new Audio("res/pop3.ogg");
 bubblesound3.volume = 0.25;
-let squeegeesound = new Audio("/res/squeegee.mp3");
+let squeegeesound = new Audio("res/squeegee.mp3");
 squeegeesound.volume = 0.75;
-let boopsound = new Audio("/res/boop.mp3");
+let boopsound = new Audio("res/boop.mp3");
 boopsound.volume = 0.25;
 //buttons
 const soap = document.getElementById("soap");
 const squeegee = document.getElementById("squeegee");
 
 function soapcursor(){
-    document.getElementById("gamediv").style.cursor = "url('/res/soap.png'), auto";
-    bellyarea.style.cursor = "url('/res/soap.png'), auto";
-    nose.style.cursor = "url('/res/soap.png'), auto";
-    notbelly.style.cursor = "url('/res/soap.png'), default";
+    document.getElementById("gamediv").style.cursor = "url('res/soap.png'), auto";
+    bellyarea.style.cursor = "url('res/soap.png'), auto";
+    nose.style.cursor = "url('res/soap.png'), auto";
+    notbelly.style.cursor = "url('res/soap.png'), default";
 }
 function squeegeecursor(){
-    document.getElementById("gamediv").style.cursor = "url('/res/squeegee.png'), auto";
-    bellyarea.style.cursor = "url('/res/squeegee.png'), auto";
-    nose.style.cursor = "url('/res/squeegee.png'), auto";
-    notbelly.style.cursor = "url('/res/squeegee.png'), default";
+    document.getElementById("gamediv").style.cursor = "url('res/squeegee.png'), auto";
+    bellyarea.style.cursor = "url('res/squeegee.png'), auto";
+    nose.style.cursor = "url('res/squeegee.png'), auto";
+    notbelly.style.cursor = "url('res/squeegee.png'), default";
 }
 
 function washmybelly(){
     if (angerlevel == 3 || gameimage.src == "https://pt78spooky.github.io/res/angrybellay1.png"){
-        gameimage.src = "/res/angrybellay2.png";
+        gameimage.src = "res/angrybellay2.png";
         dialoguep.innerHTML = " WASH MY BELLY!!!";
         angerlevel = 0;
     } else if(gameimage.src == "https://pt78spooky.github.io/res/bellay3.png" || gameimage.src == "https://pt78spooky.github.io/res/angrybellay2.png"){
-        gameimage.src = "/res/bellay1.png"
+        gameimage.src = "res/bellay1.png"
         dialoguep.innerHTML = "";
         angerlevel++;
     } else if(gameimage.src != "https://pt78spooky.github.io/res/bellay3.png"){
-        gameimage.src = "/res/bellay3.png"
+        gameimage.src = "res/bellay3.png"
         dialoguep.innerHTML = "Wash my belly!";
     }
     seconds = 0;
 }
 
 bellyarea.addEventListener("mousemove", function (e) {
-    if(bellyarea.style.cursor == 'url("/res/soap.png"), auto'){
+    if(bellyarea.style.cursor == 'url("res/soap.png"), auto'){
         [1, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
         var j = (1 - i) * 25;
         var elem = document.createElement('img');
@@ -72,7 +72,7 @@ bellyarea.addEventListener("mousemove", function (e) {
         elem.style.width = size;
         elem.style.opacity = "0.5";
         elem.style.height = size;
-        elem.src = "/res/bubble.png";
+        elem.src = "res/bubble.png";
         elem.style.pointerEvents = 'none';
         document.body.appendChild(elem);
         score = score +0.4;
@@ -83,7 +83,7 @@ bellyarea.addEventListener("mousemove", function (e) {
         var i = Math.floor(Math.random() * 10 +1);
         eval('bubblesound'+i+".play()");
         });
-    } else if (bellyarea.style.cursor == 'url("/res/squeegee.png"), auto'){
+    } else if (bellyarea.style.cursor == 'url("res/squeegee.png"), auto'){
         squeegeesound.play();
         score = score +0.4;
         scorep.innerHTML = "Score: " +Math.round(score/10);
@@ -92,14 +92,14 @@ bellyarea.addEventListener("mousemove", function (e) {
 
 function washing(){
     console.log("washing!");
-    gameimage.src = "/res/bellay2.png";
+    gameimage.src = "res/bellay2.png";
     dialoguep.innerHTML = "YAAY!!! :3";
     seconds = 0;
 }
 
 function notwashing(){
     console.log("not washing...");
-    gameimage.src = "/res/bellay1.png";
+    gameimage.src = "res/bellay1.png";
     dialoguep.innerHTML = "";
     squeegeesound.pause();
 }
@@ -110,7 +110,7 @@ function boop(){
 }
 
 function notmybelly(){
-    gameimage.src = "/res/angrybellay1.png";
+    gameimage.src = "res/angrybellay1.png";
     dialoguep.innerHTML = "That's not my belly!";
 }
 
